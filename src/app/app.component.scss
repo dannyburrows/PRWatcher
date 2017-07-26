@@ -1,0 +1,32 @@
+.repo {
+    text-transform: uppercase;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.pull-request {
+    margin-left: 60px;
+    margin-bottom: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.pr-open {
+    padding: 3px 5px;
+    color: white;
+    background-color:#ff3232;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

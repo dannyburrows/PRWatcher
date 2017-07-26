@@ -1,3 +1,24 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngFor="let r of repos">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="repo">
+        <a href="{{r.Html}}" target="_blank">{{r.Name}}</a>
+      </div>
+      <div class="row pull-request" *ngFor="let pr of r.PRs" (click)="nav(pr.URL)">
+        <div class="col-md-1">
+          <div [ngClass]="{'pr-open': pr.State === 'open'}">
+          <!--<a href="{{pr.URL}}" target="_blank">-->
+            {{ pr.State }}
+          <!--</a>-->
+          </div>
+        </div>
+        <div class="col-md-1">
+          <img [src]="pr.Avatar" class="avatar"> {{pr.User}}
+        </div>
+        <div class="col-md-9">
+          {{ pr.Title }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
